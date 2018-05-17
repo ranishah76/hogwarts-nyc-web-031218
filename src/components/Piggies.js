@@ -5,14 +5,11 @@ import '../App.css';
 import Appcss from "../App.css"
 import Pig from './Pig'
 
-
 class Piggies extends Component {
   constructor(props) {
     super(props)
 
   }
-
-
 
 
  getHog = () => {
@@ -100,6 +97,7 @@ else if (this.props.sortedByName === true) {
         {this.getHog()}
         </div>
   )}
+
 }
 }
 

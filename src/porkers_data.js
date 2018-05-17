@@ -15,7 +15,7 @@ import truffleshuffle from './hog-imgs/truffleshuffle.jpg';
 const hogs = [
   {
     name: 'Mudblood',
-    image: mudblood,
+      image: mudblood,
     specialty: 'Mediocre magic',
     greased: false,
     'weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water': 2.0,

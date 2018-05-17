@@ -23,7 +23,8 @@ constructor() {
   super()
 
   this.state = {
-    clicked: false
+    clicked: false,
+    className: "block"
   }
 }
 
@@ -35,15 +36,26 @@ showInformation = () => {
 }
 
 
+hideHog = () => {
+ this.setState( {
+   className: "hidden"
+ })
+}
+
 render () {
+  console.log(this.state.className)
 if (this.state.clicked === false) {
   return (
-     <ul className="pigTile">
+    <div className={this.state.className}>
+     <ul className="pigTile" >
        <li>Name: {this.props.hog.name}</li>
        <li><img onClick={this.showInformation} src={this.props.hog.image}/></li>
-      </ul>)}
+       <button onClick={this.hideHog} > Hide </button>
+      </ul>
+      </div> )}
   else {
     return (
+      <div className={this.state.className}>
     <ul className="pigTile">
           <li>Name: {this.props.hog.name}</li>
           <li><img onClick={this.showInformation} src={this.props.hog.image}/></li>
@@ -51,7 +63,9 @@ if (this.state.clicked === false) {
           <li>Greased: {this.props.hog.greased.toString()}</li>
           <li>Weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water: {this.props.hog['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']}</li>
           <li>Highest medal achieved: {this.props.hog['highest medal achieved']} </li>
+          <button onClick={this.hideHog}> Hide </button>
      </ul>
+     </div>
         )
       }
  }

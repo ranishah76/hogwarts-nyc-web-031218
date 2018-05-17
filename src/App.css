@@ -64,7 +64,7 @@ ul {
 
 .subtleText {
   color: #D1D1D1;
-  font-size: .75em; 
+  font-size: .75em;
 }
 
 
@@ -72,7 +72,12 @@ ul {
   margin: auto;
 }
 
+button {
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 
+}
 .pigTile {
   display: inline;
   background-repeat: no-repeat;
@@ -121,6 +126,9 @@ ul {
   transform: scale(1.05);
 }
 
+.hidden {
+  display: none;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
